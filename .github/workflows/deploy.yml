@@ -23,7 +23,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ec2-user@${{ secrets.EC2_IP }} << 'EOF'
             # Navigate to your project directory on EC2
-            cd /path/to/your/project
+            cd /home/ec2-user/my-app
 
             # Build the Docker image on the EC2 instance
             docker build -t my-app .
