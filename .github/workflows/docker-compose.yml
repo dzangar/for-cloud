@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    image: my-app  # This image will be built locally on EC2 during the workflow
+    ports:
+      - "80:80"
+    environment:
+      - APP_ENV=production
+    volumes:
+      - ./app:/app  # Update this based on your app's folder structure
